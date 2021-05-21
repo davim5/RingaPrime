@@ -1,6 +1,9 @@
 import { Container } from "./styles";
+import { api }  from '../../services/api'
+
 
 export function MovieList(){
+
     return (
         <Container>
         <strong>Filmes</strong>
