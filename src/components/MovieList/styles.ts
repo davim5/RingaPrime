@@ -14,8 +14,13 @@ export const Container = styled.div`
         li {
             margin: 20px;
             background: lightgray;
+            width: 267px;
             height: 150px;
-            width: 200px;
+
+            img{
+                width: 267px;
+                height: 150px;
+            }
 
         }
     }

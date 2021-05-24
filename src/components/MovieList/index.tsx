@@ -1,30 +1,37 @@
 import { Container } from "./styles";
 import { api }  from '../../services/api'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+interface MovieProps{
+    id:number,
+    title: string,
+    genre: string,
+    duration:string,
+    synpsis: string,
+    year: string,
+    age: string,
+    poster: string,
+};
 
 export function MovieList(){
+    const [movies, setMovies] = useState<MovieProps[]>([]);
 
     useEffect(()=>{
         api.get('/movies')
-        .then(response => console.log(response.data))
+        .then(response => setMovies(response.data.movies));
     },[])
+
+    console.log(movies);
+
     return (
         <Container>
         <strong>Filmes</strong>
         <ul>
-            <li>
-                <img src="" alt="poster" />
+        {movies.map( movie => (
+            <li key={movie.id}>
+                <img src={movie.poster} alt={movie.title} />
             </li>
-            <li>
-                <img src="" alt="poster" />
-            </li>
-            <li>
-                <img src="" alt="poster" />
-            </li>
-            <li>
-                <img src="" alt="poster" />
-            </li>
+        ))}
         </ul>
         </Container>
     );
