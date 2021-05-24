@@ -33,6 +33,22 @@ export function MovieList(){
             </li>
         ))}
         </ul>
+        <strong>Series</strong>
+        <ul>
+        {movies.map( movie => (
+            <li key={movie.id}>
+                <img src={movie.poster} alt={movie.title} />
+            </li>
+        ))}
+        </ul>
+        <strong>Recomendados</strong>
+        <ul>
+        {movies.map( movie => (
+            <li key={movie.id}>
+                <img src={movie.poster} alt={movie.title} />
+            </li>
+        ))}
+        </ul>
         </Container>
     );
 }

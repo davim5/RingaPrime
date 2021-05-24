@@ -1,6 +1,11 @@
+import banner from '../../images/banner.webp';
+import { Container } from './styles';
+
 export function Banner(){
 
     return(
-        <h1>Banner</h1>
+        <Container>
+            <img src={banner} alt="Serie ou filme em cartaz" />
+        </Container>
     );
 }

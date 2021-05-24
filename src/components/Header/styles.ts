@@ -9,8 +9,11 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-evenly;
 
+    
+    box-shadow: 0 8px 6px -6px black;
+
     img{
-        height: 50px;
+        height: 40px;
     }
 
     ul{
@@ -24,6 +27,8 @@ export const Container = styled.header`
                 text-decoration: none;
                 color: inherit;
             }
+
+            transition: text-decoration .2s;
 
             &:hover{
                 text-decoration: underline;

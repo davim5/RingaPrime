@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
         font-family: sans-serif;
     }
 
+    body{
+        background: #111111;
+    }
+
     html {
 	@media (max-width: 1080px){
 		font-size:93.75%;

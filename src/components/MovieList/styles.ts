@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    margin: 20px;
-
+    margin: 20px 0;
+    color: #f4f4f4;
     strong{
+        margin-left: 20px;
         font-size: 24px;
     }
 
